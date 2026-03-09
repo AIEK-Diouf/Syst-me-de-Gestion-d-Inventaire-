@@ -47,6 +47,7 @@ def modifer_produit_stock():
         print(f"Le produit {NOM} a été modifié avec succès.")
     else:
         print("Le produit n'existe pas !")
+        print("Ajoute le")
 
 ###
 def verifier_stock():
