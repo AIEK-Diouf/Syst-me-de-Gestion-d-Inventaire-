@@ -1,8 +1,5 @@
  Ce projet, intitulé **Système de Gestion d’Inventaire (S_G_I)**, est une application console développée en **Python** permettant de gérer efficacement le stock de produits pour une entreprise ou un commerce.
 
-Voici une description détaillée des composants et fonctionnalités de votre projet :
-
----
 
 ## 🛠️ Architecture des Données
 
@@ -36,7 +33,3 @@ L'application offre un cycle de gestion complet (CRUD) ainsi que des outils d'an
 
 Le projet utilise un **menu interactif numéroté (1 à 12)** pour une navigation simple en ligne de commande. L'affichage de l'inventaire complet est formaté sous forme de tableau pour une lecture claire et professionnelle.
 
----
-
-**Souhaitez-vous que je rédige un fichier  professionnel pour votre dépôt GitHub basé sur ces éléments ?**
-Ce projet, intitulé Système de Gestion d’Inventaire (S_G_I), est une application console développée en Python permettant de gérer efficacement le stock de produits pour une entreprise ou un commerce.
