@@ -1,5 +1,4 @@
-('C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
- "d'Inventaire\\dist\\S_G_I.exe",
+('C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\dist\\S_G_I.exe',
  True,
  False,
  False,
@@ -30,32 +29,25 @@
  None,
  None,
  None,
- 'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
- "d'Inventaire\\build\\S_G_I\\S_G_I.pkg",
+ 'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\S_G_I.pkg',
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\PYZ-00.pyz",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\localpycs\\struct.pyc",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\localpycs\\pyimod01_archive.pyc",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\localpycs\\pyimod02_importers.pyc",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\localpycs\\pyimod03_ctypes.pyc",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\localpycs\\pyimod04_pywin32.pyc",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
    'C:\\Users\\diouf\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
@@ -64,8 +56,7 @@
    'C:\\Users\\diouf\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
   ('S_G_I',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\S_G_I.py",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\S_G_I.py',
    'PYSOURCE'),
   ('python314.dll',
    'C:\\Users\\diouf\\AppData\\Local\\Programs\\Python\\Python314\\python314.dll',
@@ -107,13 +98,12 @@
    'C:\\Users\\diouf\\AppData\\Local\\Programs\\Python\\Python314\\DLLs\\libssl-3.dll',
    'BINARY'),
   ('base_library.zip',
-   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
-   "d'Inventaire\\build\\S_G_I\\base_library.zip",
+   'C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\base_library.zip',
    'DATA')],
  [],
  False,
  False,
- 1773018416,
+ 1773154658,
  [('run.exe',
    'C:\\Users\\diouf\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],

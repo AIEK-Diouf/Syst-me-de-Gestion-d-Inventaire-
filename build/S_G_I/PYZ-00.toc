@@ -1,5 +1,4 @@
-('C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Système de Gestion '
- "d'Inventaire\\build\\S_G_I\\PYZ-00.pyz",
+('C:\\Users\\diouf\\OneDrive\\Documents\\GIT\\Syst-me-de-Gestion-d-Inventaire-\\build\\S_G_I\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\diouf\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\__future__.py',
    'PYMODULE'),
