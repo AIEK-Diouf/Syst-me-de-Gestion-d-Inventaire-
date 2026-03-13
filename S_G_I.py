@@ -8,21 +8,38 @@ Produit = {}  # Stocke { 'Nom': (Prix, Catégorie) }
 Stock = {}    # Stocke { 'Nom': Quantité }
 Seuils = {}   # Stocke { 'Nom': Seuil_Alerte }
 
-###
+###1
 def ajouter_produit_stock():
     """Demande les infos à l'utilisateur et remplit les dictionnaires."""
     NOM = input("Nom du produit : ")
-    PRIX = float(input("Prix du produit en MAD : "))
-    CAT = input("Catégorie du produit : ")
-    QTE = int(input("Stock du produit : "))
-    LIMITE = int(input("Seuil d'alerte : "))
 
-    # Enregistrement simultané dans les trois structures
+    while True:
+        try:
+            PRIX = float(input("Prix du produit en MAD : "))
+            break
+        except ValueError:
+            print("Erreur : La valeur du prix doit être un nombre (ex: 12.50).")
+
+    CAT = input("Catégorie du produit : ")
+    while True :
+        try:
+            QTE = int(input("Stock du produit : "))
+            break
+        except ValueError:
+            print("Erreur : La quantité doit être un nombre entier.")
+    while True:
+        try:
+            LIMITE = int(input("Seuil d'alerte : "))
+            break
+        except ValueError:
+            print("Erreur : Le seuil doit être un nombre entier.")
+
+    #Enregistrement final
     Produit[NOM] = (PRIX, CAT)
     Stock[NOM] = QTE
     Seuils[NOM] = LIMITE
+    print(f"\n✅ Le produit '{NOM}' a été ajouté avec succès.")
 
-    print(f"Le produit {NOM} a été ajouté avec succès.")
 
 ###
 def supprime_produit_stock():
@@ -41,16 +58,24 @@ def modifer_produit_stock():
     """Met à jour les valeurs pour une clé (NOM) déjà existante."""
     NOM = input("Nom du produit à modifier : ")
     if NOM in Produit:
-        PRIX = float(input("Nouveau prix : "))
-        CAT = input("Nouvelle catégorie : ")
-        QTE = int(input("Nouveau stock : "))
+        while True:
+            try:
+                PRIX = float(input("Nouveau prix : "))
+                break
+            except ValueError:
+                print("Erreur : La valeur du prix doit être un nombre (ex: 12.50).")
 
+        CAT = input("Nouvelle catégorie : ")
+        while True:
+            try:
+                QTE = int(input("Nouveau stock : "))
+                break
+            except ValueError:
+                print("Erreur : La quantité doit être un nombre entier.")
+        #Enregistrement final
         Produit[NOM] = (PRIX, CAT)
         Stock[NOM] = QTE
-        print(f"Le produit {NOM} a été modifié avec succès.")
-    else:
-        print("Le produit n'existe pas !")
-
+        print(f"\n✅ Le produit '{NOM}' a été modifier avec succès.")
 ###
 def verifier_stock():
     """Compare le stock actuel au seuil limite défini à l'ajout."""
