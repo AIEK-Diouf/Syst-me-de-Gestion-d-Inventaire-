@@ -1,3 +1,9 @@
+'''
+Created on MARCH 04, 2026
+@author: AIEK-DIOUF
+
+'''
+
 import os
 import csv
 from datetime import datetime
@@ -38,7 +44,7 @@ def ajouter_produit_stock():
     Produit[NOM] = (PRIX, CAT)
     Stock[NOM] = QTE
     Seuils[NOM] = LIMITE
-    print(f"\n✅ Le produit '{NOM}' a été ajouté avec succès.")
+    print(f"Le produit '{NOM}' a été ajouté avec succès.")
 
 
 ###
