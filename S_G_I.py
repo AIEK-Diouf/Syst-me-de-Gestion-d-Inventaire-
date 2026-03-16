@@ -13,11 +13,12 @@ from datetime import datetime
 Produit = {}  # Stocke { 'Nom': (Prix, Catégorie) }
 Stock = {}    # Stocke { 'Nom': Quantité }
 Seuils = {}   # Stocke { 'Nom': Seuil_Alerte }
+L = 0
 
 ###1
 def ajouter_produit_stock():
     """Demande les infos à l'utilisateur et remplit les dictionnaires."""
-    NOM = input("Nom du produit : ")
+    NOM = input("Nom du produit : ").lower
 
     while True:
         try:
@@ -50,7 +51,7 @@ def ajouter_produit_stock():
 ###
 def supprime_produit_stock():
     """Vérifie l'existence d'un produit et le retire de partout."""
-    NOM = input("Nom du produit à supprimer : ")
+    NOM = input("Nom du produit à supprimer : ").lower
     if NOM in Produit:
         del Produit[NOM]
         del Stock[NOM]
@@ -60,9 +61,9 @@ def supprime_produit_stock():
         print("Le produit n'existe pas, impossible de le supprimer.")
 
 ###
-def modifer_produit_stock():
+def modifier_produit_stock():
     """Met à jour les valeurs pour une clé (NOM) déjà existante."""
-    NOM = input("Nom du produit à modifier : ")
+    NOM = input("Nom du produit à modifier : ").lower
     if NOM in Produit:
         while True:
             try:
@@ -85,7 +86,7 @@ def modifer_produit_stock():
 ###
 def verifier_stock():
     """Compare le stock actuel au seuil limite défini à l'ajout."""
-    NOM = input("Nom du produit à vérifier : ")
+    NOM = input("Nom du produit à vérifier : ").lower
     if NOM in Stock and NOM in Seuils:
         if Stock[NOM] <= Seuils[NOM]:
             print(f"ALERTE : Le produit {NOM} a un stock faible ({Stock[NOM]}).")
@@ -135,7 +136,7 @@ def calculer_valeur_total_stock():
 ###
 def recherch_P_N():
     """Moteur de recherche par clé directe dans le dictionnaire."""
-    produit_search = input("Nom du produit à rechercher : ")
+    produit_search = input("Nom du produit à rechercher : ").lower
     if produit_search in Produit:
         prix, categorie = Produit[produit_search]
         quantite = Stock[produit_search]
@@ -219,54 +220,98 @@ def importer_sauvegarde_csv():
         print(f"Données chargées avec succès depuis {nom_fichier} !")
     except Exception as e:
         print(f"Erreur lors de l'importation : {e}")
+                
+                
+                
+def LOGIN():
+    global L
+    amn = {"ADMINE": "1234"}
+    
+    print("--- CONNEXION ADMIN ---")
+    
+    # 1. Boucle pour l'ID
+    while True:
+        try:
+            admine_id = input("ID du admine : ")
+            if admine_id not in amn:
+                raise ValueError
+            break # Sort de la boucle ID si correct
+        except ValueError:
+            print("Erreur : ID incorrect. Réessayez.")
 
-###       
+    # 2. Boucle pour le Password
+    while True:
+        try:
+            admine_pw = input("Password de l'admine : ")
+            if admine_pw != amn[admine_id]:
+                raise ValueError
+            
+            # Si on arrive ici, tout est bon
+            L = 1.0  # On valide l'accès
+            print("Connexion réussie !\n")
+            break 
+        except ValueError:
+            print("Erreur : Password incorrect. Réessayez.")
+            
+            
 def menu():
     """Boucle principale de l'interface utilisateur."""
-    while True:
-        print("\n--- GESTION D'INVENTAIRE ---")
-        print("1. Ajouter un produit")
-        print("2. Supprimer un produit")
-        print("3. Modifier un produit")
-        print("4. Vérifier stock faible")
-        print("5. Trier par prix")
-        print("6. Trier par catégorie")
-        print("7. Calculer valeur totale")
-        print("8. Rechercher un produit")
-        print("9. Afficher tout l'inventaire")
-        print("10. Sauvegarder l'inventaire (CSV)")
-        print("11. Importer une sauvegarde (CSV)")
-        print("12. Quitter")
-        
-        choix = input("\nChoisissez une option (1-12) : ")
+    global L
+    
+    # On lance le login en premier
+    LOGIN()
+    
+    # Si L n'est pas 1.0, on ne rentre jamais dans le menu
+    if L == 1.0:
 
-        if choix == "1":
-            ajouter_produit_stock()
-        elif choix == "2":
-            supprime_produit_stock()
-        elif choix == "3":
-            modifer_produit_stock()
-        elif choix == "4":
-            verifier_stock()
-        elif choix == "5":
-            trier_produit_prix()
-        elif choix == "6":
-            trier_produit_Categorie()
-        elif choix == "7":
-            calculer_valeur_total_stock()
-        elif choix == "8":
-            print(recherch_P_N())
-        elif choix == "9":
-            afficher_inventaire_complet()
-        elif choix == "10":
-            sauvgard_donner()
-        elif choix == "11":
-            importer_sauvegarde_csv()
-        elif choix == "12":
-            print("Au revoir !")
-            break
+        # If login is successful, enter the main loop
+        while True:
+            print("\n--- GESTION D'INVENTAIRE ---")
+            print("1. Ajouter un produit")
+            print("2. Supprimer un produit")
+            print("3. Modifier un produit")
+            print("4. Vérifier stock faible")
+            print("5. Trier par prix")
+            print("6. Trier par catégorie")
+            print("7. Calculer valeur totale")
+            print("8. Rechercher un produit")
+            print("9. Afficher tout l'inventaire")
+            print("10. Sauvegarder l'inventaire (CSV)")
+            print("11. Importer une sauvegarde (CSV)")
+            print("12. Quitter")
+            
+            choix = input("\nChoisissez une option (1-12) : ")
+
+            if choix == "1":
+                ajouter_produit_stock()
+            elif choix == "2":
+                supprime_produit_stock()
+            elif choix == "3":
+                modifier_produit_stock()
+            elif choix == "4":
+                verifier_stock()
+            elif choix == "5":
+                trier_produit_prix()
+            elif choix == "6":
+                trier_produit_Categorie()
+            elif choix == "7":
+                calculer_valeur_total_stock()
+            elif choix == "8":
+                # Note: rech_P_N() must return a string or value to print
+                print(recherch_P_N())
+            elif choix == "9":
+                afficher_inventaire_complet()
+            elif choix == "10":
+                sauvgard_donner()
+            elif choix == "11":
+                importer_sauvegarde_csv()
+            elif choix == "12":
+                print("Au revoir !")
+                break
+            else:
+                print("Option invalide, réessayez.")
         else:
-            print("Option invalide, réessayez.")
+            print("Accès refusé.")
 
 # --- POINT D'ENTRÉE DU PROGRAMME ---
 if __name__ == "__main__":
